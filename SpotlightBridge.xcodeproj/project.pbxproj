@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F0E30BA24CD891D00B45588 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0E30B924CD891D00B45588 /* AppKit.framework */; };
+		6F0E30BC24CD891D00B45588 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F0E30BB24CD891D00B45588 /* Foundation.framework */; };
+		6F0E30C024CD891D00B45588 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F0E30BF24CD891D00B45588 /* Info.plist */; };
+		6F0E30C324CD891D00B45588 /* SpotlightBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30C224CD891D00B45588 /* SpotlightBridge.m */; };
+		6F0E30C724CD891D00B45588 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30C624CD891D00B45588 /* ZKSwizzle.m */; };
+		6F0E30C924CD891D00B45588 /* PrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 6F0E30C824CD891D00B45588 /* PrefixHeader.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F0E30B924CD891D00B45588 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		6F0E30BB24CD891D00B45588 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		6F0E30BF24CD891D00B45588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		6F0E30C124CD891D00B45588 /* SpotlightBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotlightBridge.h; sourceTree = "<group>"; };
+		6F0E30C224CD891D00B45588 /* SpotlightBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotlightBridge.m; sourceTree = "<group>"; };
+		6F0E30C524CD891D00B45588 /* ZKSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
+		6F0E30C624CD891D00B45588 /* ZKSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
+		6F0E30C824CD891D00B45588 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F0E30B324CD891D00B45588 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F0E30BA24CD891D00B45588 /* AppKit.framework in Frameworks */,
+				6F0E30BC24CD891D00B45588 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F0E30AD24CD891D00B45588 = {
+			isa = PBXGroup;
+			children = (
+				6F0E30BD24CD891D00B45588 /* SpotlightBridge */,
+				6F0E30B824CD891D00B45588 /* Frameworks */,
+				6F0E30B724CD891D00B45588 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F0E30B724CD891D00B45588 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F0E30B824CD891D00B45588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F0E30B924CD891D00B45588 /* AppKit.framework */,
+				6F0E30BB24CD891D00B45588 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F0E30BD24CD891D00B45588 /* SpotlightBridge */ = {
+			isa = PBXGroup;
+			children = (
+				6F0E30C124CD891D00B45588 /* SpotlightBridge.h */,
+				6F0E30C224CD891D00B45588 /* SpotlightBridge.m */,
+				6F0E30C424CD891D00B45588 /* ZKSwizzle */,
+				6F0E30BE24CD891D00B45588 /* Supporting Files */,
+			);
+			path = SpotlightBridge;
+			sourceTree = "<group>";
+		};
+		6F0E30BE24CD891D00B45588 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F0E30BF24CD891D00B45588 /* Info.plist */,
+				6F0E30C824CD891D00B45588 /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F0E30C424CD891D00B45588 /* ZKSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				6F0E30C524CD891D00B45588 /* ZKSwizzle.h */,
+				6F0E30C624CD891D00B45588 /* ZKSwizzle.m */,
+			);
+			path = ZKSwizzle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F0E30B524CD891D00B45588 /* SpotlightBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F0E30CC24CD891D00B45588 /* Build configuration list for PBXNativeTarget "SpotlightBridge" */;
+			buildPhases = (
+				6F0E30B224CD891D00B45588 /* Sources */,
+				6F0E30B324CD891D00B45588 /* Frameworks */,
+				6F0E30B424CD891D00B45588 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotlightBridge;
+			productName = SpotlightBridge;
+			productReference = 6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F0E30AE24CD891D00B45588 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Benjamin Johnson";
+				TargetAttributes = {
+					6F0E30B524CD891D00B45588 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 6F0E30B124CD891D00B45588 /* Build configuration list for PBXProject "SpotlightBridge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F0E30AD24CD891D00B45588;
+			productRefGroup = 6F0E30B724CD891D00B45588 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F0E30B524CD891D00B45588 /* SpotlightBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F0E30B424CD891D00B45588 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F0E30C924CD891D00B45588 /* PrefixHeader.pch in Resources */,
+				6F0E30C024CD891D00B45588 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F0E30B224CD891D00B45588 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F0E30C324CD891D00B45588 /* SpotlightBridge.m in Sources */,
+				6F0E30C724CD891D00B45588 /* ZKSwizzle.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6F0E30CA24CD891D00B45588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		6F0E30CB24CD891D00B45588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+			};
+			name = Release;
+		};
+		6F0E30CD24CD891D00B45588 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SpotlightBridge/PrefixHeader.pch;
+				INFOPLIST_FILE = SpotlightBridge/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6F0E30CE24CD891D00B45588 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = SpotlightBridge/PrefixHeader.pch;
+				INFOPLIST_FILE = SpotlightBridge/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/MacEnhance/Plugins";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F0E30B124CD891D00B45588 /* Build configuration list for PBXProject "SpotlightBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F0E30CA24CD891D00B45588 /* Debug */,
+				6F0E30CB24CD891D00B45588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F0E30CC24CD891D00B45588 /* Build configuration list for PBXNativeTarget "SpotlightBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F0E30CD24CD891D00B45588 /* Debug */,
+				6F0E30CE24CD891D00B45588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F0E30AE24CD891D00B45588 /* Project object */;
+}

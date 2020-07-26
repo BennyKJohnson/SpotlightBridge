@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  SpotlightBridge
+//
+//  Created by Benjamin Johnson on 26/7/20.
+//Copyright © 2020 Benjamin Johnson. All rights reserved.
+//
+
+#ifndef SpotlightBridge_PrefixHeader_pch
+#define SpotlightBridge_PrefixHeader_pch
+
+#import <Cocoa/Cocoa.h>
+#import "ZKSwizzle.h"
+
+#endif
+
