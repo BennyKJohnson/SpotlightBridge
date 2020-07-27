@@ -6,21 +6,23 @@
 //  Copyright © 2020 Benjamin Johnson. All rights reserved.
 //
 
-#import "Headers/10.15/SearchFoundation/SFMutableResultSection.h"
+@class SFMutableResultSection;
 
 #import "SPBResponse.h"
 #import "SPBResultSection.h"
+#import "SPBResultSection+SFMutableResultSection.h"
+#include <Availability.h>
 
 @implementation SPBResponse
 
 -(SPKResponse*) spotlightResponse {
     SPKResponse *response;
     
-    if (@available(macOS 10.15,*)) {
-        response = [self spotlightResponseForCatalina];
-    } else if (@available(macOS 10.14, *)) {
-        response = [self spotlightResponseForMojave];
-    }
+#ifdef __MAC_10_14
+    response = [self spotlightResponseForMojave];
+#else
+    response = [self spotlightResponseForCatalina];
+#endif
     
     if (!response) {
         return NULL;
@@ -41,10 +43,8 @@
 -(SPKResponse *) spotlightResponseForMojave {
     SPKResponse *response;
     
-    #if MAC_OS_X_VERSION_10_14 == MAC_OS_X_VERSION_MAX_ALLOWED
     NSArray *results = [[self sections][0] results];
     response = [[SPKResponse alloc]initWithQueryID:[self queryId] kind:2 results:results];
-    #endif
     
     return response;
 }

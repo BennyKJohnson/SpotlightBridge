@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SFMutableResultSection.h"
-
+#import "SPBSearchResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,8 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) initWithTitle: (NSString *)title;
 
--(SFMutableResultSection*)createSpotlightResultSection;
-
+-(void)setRequiredAttributesOnResult:(SPBSearchResult *)result;
 
 @end
 

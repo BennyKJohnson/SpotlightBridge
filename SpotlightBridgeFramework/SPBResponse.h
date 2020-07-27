@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if MAC_OS_X_VERSION_10_14 == MAC_OS_X_VERSION_MAX_ALLOWED
-#import "Headers/10.14/Spotlight/SPKResponse.h"
-#elif MAC_OS_X_VERSION_10_15 <= MAC_OS_X_VERSION_MAX_ALLOWED
 #import "SPKResponse.h"
-#endif
 
 
 NS_ASSUME_NONNULL_BEGIN

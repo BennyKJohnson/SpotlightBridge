@@ -26,9 +26,4 @@
     return YES;
 }
 
--(void) start {
-    [super start];
-    
-}
-
 @end

@@ -55,5 +55,11 @@
 - (id)initWithQueryID:(unsigned long long)arg1 kind:(int)arg2 sections:(id)arg3 groupedResults:(id)arg4;
 - (id)initWithQueryID:(unsigned long long)arg1 kind:(int)arg2 sections:(id)arg3 groupedResults:(id)arg4 error:(id)arg5;
 
+//Mojave 10.14
+- (id)initWithQueryID:(unsigned long long)arg1 results:(id)arg2;
+- (id)initWithQueryID:(unsigned long long)arg1 kind:(int)arg2 results:(id)arg3;
+- (id)initWithQueryID:(unsigned long long)arg1 kind:(int)arg2 results:(id)arg3 groupedResults:(id)arg4;
+- (id)initWithQueryID:(unsigned long long)arg1 kind:(int)arg2 results:(id)arg3 groupedResults:(id)arg4 error:(id)arg5;
+
 @end
 

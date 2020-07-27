@@ -8,6 +8,7 @@
 
 #import "SPBResultSection.h"
 #import "SPBSearchResult.h"
+#import "SFMutableResultSection.h"
 
 @implementation SPBResultSection
 
@@ -18,24 +19,6 @@
     }
     
     return self;
-}
-
--(SFMutableResultSection*)createSpotlightResultSection {
-    
-    SFMutableResultSection *section = [[SFMutableResultSection alloc]init];
-    
-    for (SPBSearchResult *result in self.results) {
-        [self setRequiredAttributesOnResult:result];
-    }
-        
-    [section addResultsFromArray:[self results]];
-    [section setGroupId:[NSNumber numberWithInt:14]];
-    [section setGroupName:[self title]];
-    [section setDomain:4];
-    [section setBundleIdentifier:@"com.apple.calculator"];
-    [section setTitle: @"MENU_EXPRESSION"];
-    
-    return section;
 }
 
 -(void)setRequiredAttributesOnResult:(SPBSearchResult *)result {

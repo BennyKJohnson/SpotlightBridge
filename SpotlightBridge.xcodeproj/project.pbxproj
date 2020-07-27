@@ -15,6 +15,13 @@
 		6F0E30D924CD895400B45588 /* SPBExtensionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30D324CD895400B45588 /* SPBExtensionManager.m */; };
 		6F0E30DA24CD895400B45588 /* SPBValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30D424CD895400B45588 /* SPBValidator.m */; };
 		6F0E30DD24CD89DE00B45588 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30DB24CD89DE00B45588 /* ZKSwizzle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6F916C5724CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */; };
+		6F916C5824CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */; };
+		6F916C5B24CED9E400B42823 /* Spotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0724CD91080077C921 /* Spotlight.framework */; };
+		6F916C5C24CED9F300B42823 /* SpotlightServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0924CD91330077C921 /* SpotlightServices.framework */; };
+		6F916C5D24CEDA0700B42823 /* SearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0524CD90E70077C921 /* SearchFoundation.framework */; };
+		6F916C5F24CEDB2900B42823 /* ParsecUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F916C5E24CEDB2900B42823 /* ParsecUI.framework */; };
+		6FA464D224CE315500F3C8F8 /* PRSPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA464D124CE315500F3C8F8 /* PRSPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DBA24CD8F940077C921 /* SpotlightBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DB824CD8F940077C921 /* SpotlightBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DD624CD90150077C921 /* SPBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD724CD90160077C921 /* SPBQuery.m */; };
@@ -36,9 +43,6 @@
 		6FD38E0224CD905D0077C921 /* SFResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFA24CD905D0077C921 /* SFResultSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0324CD905D0077C921 /* SFSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFB24CD905D0077C921 /* SFSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0424CD905D0077C921 /* SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFC24CD905D0077C921 /* SFMutableResultSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FD38E0624CD90E70077C921 /* SearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0524CD90E70077C921 /* SearchFoundation.framework */; };
-		6FD38E0824CD91080077C921 /* Spotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0724CD91080077C921 /* Spotlight.framework */; };
-		6FD38E0A24CD91330077C921 /* SpotlightServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0924CD91330077C921 /* SpotlightServices.framework */; };
 		6FD38E0B24CD914E0077C921 /* SpotlightBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +63,10 @@
 		6F0E30DB24CD89DE00B45588 /* ZKSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKSwizzle.m; sourceTree = "<group>"; };
 		6F0E30DC24CD89DE00B45588 /* ZKSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKSwizzle.h; sourceTree = "<group>"; };
 		6F0E30E324CD8D8C00B45588 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SPBResultSection+SFMutableResultSection.h"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.h"; sourceTree = SOURCE_ROOT; };
+		6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SPBResultSection+SFMutableResultSection.m"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.m"; sourceTree = SOURCE_ROOT; };
+		6F916C5E24CEDB2900B42823 /* ParsecUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParsecUI.framework; path = ../../../../System/Library/PrivateFrameworks/ParsecUI.framework; sourceTree = "<group>"; };
+		6FA464D124CE315500F3C8F8 /* PRSPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSPreviewController.h; sourceTree = "<group>"; };
 		6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD38DB824CD8F940077C921 /* SpotlightBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotlightBridge.h; sourceTree = "<group>"; };
 		6FD38DB924CD8F940077C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,9 +110,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD38E0A24CD91330077C921 /* SpotlightServices.framework in Frameworks */,
-				6FD38E0824CD91080077C921 /* Spotlight.framework in Frameworks */,
-				6FD38E0624CD90E70077C921 /* SearchFoundation.framework in Frameworks */,
+				6F916C5F24CEDB2900B42823 /* ParsecUI.framework in Frameworks */,
+				6F916C5D24CEDA0700B42823 /* SearchFoundation.framework in Frameworks */,
+				6F916C5C24CED9F300B42823 /* SpotlightServices.framework in Frameworks */,
+				6F916C5B24CED9E400B42823 /* Spotlight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +142,7 @@
 		6F0E30B824CD891D00B45588 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F916C5E24CEDB2900B42823 /* ParsecUI.framework */,
 				6FD38E0924CD91330077C921 /* SpotlightServices.framework */,
 				6FD38E0724CD91080077C921 /* Spotlight.framework */,
 				6FD38E0524CD90E70077C921 /* SearchFoundation.framework */,
@@ -184,6 +194,8 @@
 				6FD38DEE24CD905D0077C921 /* Headers */,
 				6FD38DB824CD8F940077C921 /* SpotlightBridge.h */,
 				6FD38DD624CD90150077C921 /* SPBExtension.h */,
+				6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */,
+				6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */,
 				6FD38DDE24CD90160077C921 /* SPBPreviewController.h */,
 				6FD38DE124CD90160077C921 /* SPBPreviewController.m */,
 				6FD38DDA24CD90160077C921 /* SPBPreviewController.xib */,
@@ -212,6 +224,7 @@
 		6FD38DEF24CD905D0077C921 /* 10.14 */ = {
 			isa = PBXGroup;
 			children = (
+				6FA464D124CE315500F3C8F8 /* PRSPreviewController.h */,
 				6FD38DF024CD905D0077C921 /* Spotlight */,
 			);
 			path = 10.14;
@@ -277,6 +290,7 @@
 				6FD38E0124CD905D0077C921 /* SFSearchResult_SpotlightExtras.h in Headers */,
 				6FD38E0024CD905D0077C921 /* SPPreviewController.h in Headers */,
 				6FD38E0324CD905D0077C921 /* SFSearchResult.h in Headers */,
+				6FA464D224CE315500F3C8F8 /* PRSPreviewController.h in Headers */,
 				6FD38DE524CD90160077C921 /* SPBSearchResult.h in Headers */,
 				6FD38DE824CD90160077C921 /* SPBResultSection.h in Headers */,
 				6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */,
@@ -285,6 +299,7 @@
 				6FD38DEB24CD90160077C921 /* SPBQuery.h in Headers */,
 				6FD38E0224CD905D0077C921 /* SFResultSection.h in Headers */,
 				6FD38E0424CD905D0077C921 /* SFMutableResultSection.h in Headers */,
+				6F916C5724CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD38DED24CD90160077C921 /* SPBPreviewController.m in Sources */,
+				6F916C5824CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m in Sources */,
 				6FD38DE724CD90160077C921 /* SPBResponse.m in Sources */,
 				6FD38DE424CD90160077C921 /* SPBResultSection.m in Sources */,
 				6FD38DE924CD90160077C921 /* SPBSearchResult.m in Sources */,
@@ -571,7 +587,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SearchFoundation,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeFramework;
 				PRODUCT_NAME = SpotlightBridge;
 				SDKROOT = macosx;
@@ -602,7 +622,11 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SearchFoundation,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeFramework;
 				PRODUCT_NAME = SpotlightBridge;
 				SDKROOT = macosx;
