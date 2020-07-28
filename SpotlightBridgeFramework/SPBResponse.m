@@ -18,10 +18,10 @@
 -(SPKResponse*) spotlightResponse {
     SPKResponse *response;
     
-#ifdef __MAC_10_14
-    response = [self spotlightResponseForMojave];
-#else
+#ifdef __MAC_10_15
     response = [self spotlightResponseForCatalina];
+#else
+    response = [self spotlightResponseForMojave];
 #endif
     
     if (!response) {
