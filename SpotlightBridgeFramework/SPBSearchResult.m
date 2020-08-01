@@ -10,48 +10,25 @@
 #import "SPBPreviewController.h"
 
 @implementation SPBSearchResult
--(NSString *) category {
-    return @"MENU_CONVERSION";
-}
-
-//-(NSString *) type {
-//    return [self category];
-//}
-
--(BOOL)isCalculation {
-    return YES;
-}
-
--(unsigned long long)rank {
-    return 0xffffffffffffffff;
-}
-
--(unsigned long long)score {
-    return 0xffffffffffffffff;
-}
-
--(NSString*)groupName {
-    return @"MENU_EXPRESSION";
-}
 
 -(instancetype) initWithDisplayName: (NSString*)displayName {
-    self = [super initWithContentType:nil  displayName:displayName];
+    self = [super init];
+    if (self) {
+        self.displayName = displayName;
+    }
+    
     return self;
-}
-
--(NSImage*)iconImage {
-    return [[NSWorkspace sharedWorkspace] iconForFile:@"/System/Library/CoreServices/Spotlight.app"];
-}
-//
--(BOOL)openWithSearchString:(NSString*)searchString block:(void *)arg3 {
-    return [self openWithSearchString:searchString];
 }
 
 -(BOOL)openWithSearchString: (NSString *)searchString {
     return YES;
 }
 
--(id)sharedCustomPreviewController {
+-(NSImage *)iconImage {
+    return [[NSWorkspace sharedWorkspace] iconForFile:@"/System/Library/CoreServices/Spotlight.app"];
+}
+
+-(NSViewController*) previewViewController {
     return [SPBPreviewController shared];
 }
 

@@ -11,6 +11,7 @@
 
 #ifdef __MAC_10_15
 #import "SFMutableResultSection.h"
+#import "SPBBridgingSearchResult.h"
 
 @implementation SPBResultSection (SPBResultSearction_SFMutableResultSection)
 
@@ -20,12 +21,14 @@
     }
     
     SFMutableResultSection *section = [[SFMutableResultSection alloc]init];
+    NSMutableArray *spotlightResults = [NSMutableArray array];
     
     for (SPBSearchResult *result in self.results) {
-        [self setRequiredAttributesOnResult:result];
+        SPBBridgingSearchResult *spotlightResult = [[SPBBridgingSearchResult alloc]initWithSearchResult:result];
+        [spotlightResults addObject:spotlightResult];
     }
     
-    [section addResultsFromArray:[self results]];
+    [section addResultsFromArray:[spotlightResults copy]];
     [section setGroupId:[NSNumber numberWithInt:14]];
     [section setGroupName:[self title]];
     [section setDomain:4];

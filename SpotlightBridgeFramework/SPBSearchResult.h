@@ -6,24 +6,21 @@
 //  Copyright © 2020 Benjamin Johnson. All rights reserved.
 //
 
-//#import "SpotlightHeaders/PRSResult.h"
-#import <Foundation/Foundation.h>
-#import "PRSCalculatorResult.h"
-
+#import <AppKit/AppKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SPBSearchResult: PRSCalculatorResult
+@interface SPBSearchResult: NSObject
 
 -(instancetype) initWithDisplayName: (NSString*)displayName;
 
 -(BOOL)openWithSearchString: (NSString *)searchString;
 
--(NSString *) category;
-
--(NSString *) groupName;
-
 -(NSImage*)iconImage;
+
+@property (nonatomic, strong) NSString* displayName;
+
+-(NSViewController*) previewViewController;
 
 @end
 

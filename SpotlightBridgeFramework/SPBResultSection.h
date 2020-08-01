@@ -19,7 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) initWithTitle: (NSString *)title;
 
--(void)setRequiredAttributesOnResult:(SPBSearchResult *)result;
 
 @end
 

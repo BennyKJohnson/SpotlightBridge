@@ -22,6 +22,8 @@
 		6F916C5D24CEDA0700B42823 /* SearchFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0524CD90E70077C921 /* SearchFoundation.framework */; };
 		6F916C5F24CEDB2900B42823 /* ParsecUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F916C5E24CEDB2900B42823 /* ParsecUI.framework */; };
 		6FA464D224CE315500F3C8F8 /* PRSPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FA464D124CE315500F3C8F8 /* PRSPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FCB3A5224D53A5700121805 /* SPBBridgingSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCB3A5024D53A5700121805 /* SPBBridgingSearchResult.h */; };
+		6FCB3A5324D53A5700121805 /* SPBBridgingSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB3A5124D53A5700121805 /* SPBBridgingSearchResult.m */; };
 		6FD38DBA24CD8F940077C921 /* SpotlightBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DB824CD8F940077C921 /* SpotlightBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DD624CD90150077C921 /* SPBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD724CD90160077C921 /* SPBQuery.m */; };
@@ -35,14 +37,14 @@
 		6FD38DEB24CD90160077C921 /* SPBQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DDF24CD90160077C921 /* SPBQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DEC24CD90160077C921 /* SPBResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DE024CD90160077C921 /* SPBResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DED24CD90160077C921 /* SPBPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DE124CD90160077C921 /* SPBPreviewController.m */; };
-		6FD38DFD24CD905D0077C921 /* PRSCalculatorResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF324CD905D0077C921 /* PRSCalculatorResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD38DFD24CD905D0077C921 /* PRSCalculatorResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF324CD905D0077C921 /* PRSCalculatorResult.h */; };
 		6FD38DFE24CD905D0077C921 /* SPKResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF424CD905D0077C921 /* SPKResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DFF24CD905D0077C921 /* SPKQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF524CD905D0077C921 /* SPKQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0024CD905D0077C921 /* SPPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF624CD905D0077C921 /* SPPreviewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0124CD905D0077C921 /* SFSearchResult_SpotlightExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DF824CD905D0077C921 /* SFSearchResult_SpotlightExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0224CD905D0077C921 /* SFResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFA24CD905D0077C921 /* SFResultSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38E0324CD905D0077C921 /* SFSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFB24CD905D0077C921 /* SFSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FD38E0424CD905D0077C921 /* SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFC24CD905D0077C921 /* SFMutableResultSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD38E0424CD905D0077C921 /* SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DFC24CD905D0077C921 /* SFMutableResultSection.h */; };
 		6FD38E0B24CD914E0077C921 /* SpotlightBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SPBResultSection+SFMutableResultSection.m"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.m"; sourceTree = SOURCE_ROOT; };
 		6F916C5E24CEDB2900B42823 /* ParsecUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParsecUI.framework; path = ../../../../System/Library/PrivateFrameworks/ParsecUI.framework; sourceTree = "<group>"; };
 		6FA464D124CE315500F3C8F8 /* PRSPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRSPreviewController.h; sourceTree = "<group>"; };
+		6FCB3A5024D53A5700121805 /* SPBBridgingSearchResult.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBBridgingSearchResult.h; sourceTree = "<group>"; };
+		6FCB3A5124D53A5700121805 /* SPBBridgingSearchResult.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBBridgingSearchResult.m; sourceTree = "<group>"; };
 		6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD38DB824CD8F940077C921 /* SpotlightBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotlightBridge.h; sourceTree = "<group>"; };
 		6FD38DB924CD8F940077C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,6 +212,8 @@
 				6FD38DD924CD90160077C921 /* SPBSearchResult.h */,
 				6FD38DDD24CD90160077C921 /* SPBSearchResult.m */,
 				6FD38DB924CD8F940077C921 /* Info.plist */,
+				6FCB3A5024D53A5700121805 /* SPBBridgingSearchResult.h */,
+				6FCB3A5124D53A5700121805 /* SPBBridgingSearchResult.m */,
 			);
 			path = SpotlightBridgeFramework;
 			sourceTree = "<group>";
@@ -284,7 +290,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FD38DEC24CD90160077C921 /* SPBResponse.h in Headers */,
-				6FD38DFD24CD905D0077C921 /* PRSCalculatorResult.h in Headers */,
 				6FD38DEA24CD90160077C921 /* SPBPreviewController.h in Headers */,
 				6FD38DFE24CD905D0077C921 /* SPKResponse.h in Headers */,
 				6FD38E0124CD905D0077C921 /* SFSearchResult_SpotlightExtras.h in Headers */,
@@ -295,11 +300,13 @@
 				6FD38DE824CD90160077C921 /* SPBResultSection.h in Headers */,
 				6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */,
 				6FD38DBA24CD8F940077C921 /* SpotlightBridge.h in Headers */,
-				6FD38DFF24CD905D0077C921 /* SPKQuery.h in Headers */,
 				6FD38DEB24CD90160077C921 /* SPBQuery.h in Headers */,
 				6FD38E0224CD905D0077C921 /* SFResultSection.h in Headers */,
+				6FD38DFF24CD905D0077C921 /* SPKQuery.h in Headers */,
 				6FD38E0424CD905D0077C921 /* SFMutableResultSection.h in Headers */,
 				6F916C5724CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h in Headers */,
+				6FCB3A5224D53A5700121805 /* SPBBridgingSearchResult.h in Headers */,
+				6FD38DFD24CD905D0077C921 /* PRSCalculatorResult.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +424,7 @@
 				6F916C5824CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m in Sources */,
 				6FD38DE724CD90160077C921 /* SPBResponse.m in Sources */,
 				6FD38DE424CD90160077C921 /* SPBResultSection.m in Sources */,
+				6FCB3A5324D53A5700121805 /* SPBBridgingSearchResult.m in Sources */,
 				6FD38DE924CD90160077C921 /* SPBSearchResult.m in Sources */,
 				6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */,
 			);

@@ -8,7 +8,6 @@
 
 #import "SPBResultSection.h"
 #import "SPBSearchResult.h"
-#import "SFMutableResultSection.h"
 
 @implementation SPBResultSection
 
@@ -19,20 +18,6 @@
     }
     
     return self;
-}
-
--(void)setRequiredAttributesOnResult:(SPBSearchResult *)result {
-    result.type = 2;
-    
-    if (!result.identifier) {
-       NSString *identifier = [[[NSUUID alloc] init] UUIDString];
-       result.identifier = identifier;
-   }
-   
-   if (!result.sectionBundleIdentifier) {
-       NSString *calculatorBundleIdentifier = @"com.apple.calculator";
-       result.sectionBundleIdentifier = calculatorBundleIdentifier;
-   }
 }
 
 @end
