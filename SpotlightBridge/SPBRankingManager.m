@@ -12,22 +12,15 @@
 
 @implementation SPBRankingManager
 
-+ (NSArray *) rankSections: (NSArray *)sections {
-    NSArray *spbSections = [self filterSPBSectionsFromResultSections: sections];
++ (NSArray *) mergeSpotlightBridgeSectionsFromBundleIdToSectionMapping:(NSDictionary *)bundleIdToSectionMap withRankedSections:(NSArray *)rankedSections
+{    
+    NSArray *spbSections = [self filterSPBSectionsFromResultSections: [bundleIdToSectionMap allValues]];
     
     if (![spbSections count]) {
-        return sections;
+        return rankedSections;
     }
     
-    NSMutableArray *mutableSections = [NSMutableArray arrayWithArray:sections];
-    [mutableSections removeObjectsInArray:spbSections];
-    if ([mutableSections count]) {
-        [mutableSections insertObjects:spbSections atIndexes:[NSIndexSet indexSetWithIndex: 0]];
-    } else {
-        [mutableSections addObjectsFromArray:spbSections];
-    }
-    
-    return [mutableSections copy];
+    return [spbSections arrayByAddingObjectsFromArray:rankedSections];
 }
 
 + (NSArray *) filterSPBSectionsFromResultSections:(NSArray *)sections {

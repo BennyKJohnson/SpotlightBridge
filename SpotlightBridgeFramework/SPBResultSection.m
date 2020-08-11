@@ -10,6 +10,7 @@
 #import "SPBSearchResult.h"
 
 const int SPBResultSectionDomain = 1000;
+const int SPBResultSectionGroupID = 8080;
 
 @implementation SPBResultSection
 

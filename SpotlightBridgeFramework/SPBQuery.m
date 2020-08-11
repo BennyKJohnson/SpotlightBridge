@@ -15,7 +15,6 @@
 
 -(id) initWithUserQuery:(NSString *)arg2 queryGroupId:(unsigned long long)arg3 options:(unsigned long long)arg4 keyboardLanguage:(id)arg5 {
     NSString *copyOfQuery = [arg2 copy];
-    NSLog(@"DEBUG: initWithUserQuery userQuery: %@ keyboardLanguage: %@ queryGroupId: %llu options: %llu", arg2, arg5, arg3, arg4);
     
     self = [super initWithUserQuery:copyOfQuery queryGroupId:arg3 options:arg4 keyboardLanguage:arg5];
 

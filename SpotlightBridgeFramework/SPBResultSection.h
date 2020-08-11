@@ -10,6 +10,7 @@
 #import "SPBSearchResult.h"
 
 extern int const SPBResultSectionDomain;
+extern int const SPBResultSectionGroupID;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray *results;
 
 @property (nonatomic) BOOL pinToTop;
+
+@property (nonatomic, strong) NSString *bundleIdentifier;
 
 -(instancetype) initWithTitle: (NSString *)title;
 

@@ -29,10 +29,12 @@
     }
     
     [section addResultsFromArray:[spotlightResults copy]];
-    [section setGroupId:[NSNumber numberWithInt:14]];
+    [section setGroupId:[NSNumber numberWithInt:SPBResultSectionGroupID]];
     [section setGroupName:[self title]];
     [section setDomain: SPBResultSectionDomain];
-    [section setBundleIdentifier:@"com.apple.calculator"];
+    
+    NSString *bundleIdentifier = self.bundleIdentifier ? self.bundleIdentifier : @"com.spotlightbridge.plugin";
+    [section setBundleIdentifier: bundleIdentifier];
     [section setTitle: @"SPBBridge"];
     [section setPinToTop:[self pinToTop]];
     
