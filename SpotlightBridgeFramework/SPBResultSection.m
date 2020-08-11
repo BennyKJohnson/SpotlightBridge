@@ -9,12 +9,15 @@
 #import "SPBResultSection.h"
 #import "SPBSearchResult.h"
 
+const int SPBResultSectionDomain = 1000;
+
 @implementation SPBResultSection
 
 -(instancetype) initWithTitle: (NSString *)title {
     self = [super init];
     if (self) {
         [self setTitle:title];
+        [self setPinToTop:NO];
     }
     
     return self;

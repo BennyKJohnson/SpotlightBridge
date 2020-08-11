@@ -11,7 +11,7 @@
 //@class SFMutableResultSection;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SPBResultSection (SPBResultSearction_SFMutableResultSection)
+@interface SPBResultSection (SPBResultSection_SFMutableResultSection)
 
 -(id)createSpotlightResultSection;
 

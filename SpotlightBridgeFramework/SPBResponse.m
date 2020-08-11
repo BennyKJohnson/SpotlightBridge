@@ -11,6 +11,7 @@
 #import "SPBResponse.h"
 #import "SPBResultSection.h"
 #import "SPBResultSection+SFMutableResultSection.h"
+#import "SFMutableResultSection.h"
 #include <Availability.h>
 
 @implementation SPBResponse
@@ -34,8 +35,13 @@
 }
 
 -(SPKResponse *) spotlightResponseForCatalina {
-    SFMutableResultSection *section = [[self.sections objectAtIndex:0] createSpotlightResultSection];
-    SPKResponse *response = [[SPKResponse alloc] initWithQueryID:[self queryId] kind: 2 sections:[NSArray arrayWithObject:section]];
+    NSMutableArray *spotlightResultSections = [NSMutableArray array];
+    for (SPBResultSection *section in self.sections) {
+        SFMutableResultSection *sfResultSection = [section createSpotlightResultSection];
+        [spotlightResultSections addObject:sfResultSection];
+    }
+     
+    SPKResponse *response = [[SPKResponse alloc] initWithQueryID:[self queryId] kind: 2 sections:[spotlightResultSections copy]];
     
     return response;
 }

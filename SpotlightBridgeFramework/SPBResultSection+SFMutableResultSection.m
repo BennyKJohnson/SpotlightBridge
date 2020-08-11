@@ -13,7 +13,7 @@
 #import "SFMutableResultSection.h"
 #import "SPBBridgingSearchResult.h"
 
-@implementation SPBResultSection (SPBResultSearction_SFMutableResultSection)
+@implementation SPBResultSection (SPBResultSection_SFMutableResultSection)
 
 -(SFMutableResultSection*)createSpotlightResultSection {
     if (![SFMutableResultSection class]) {
@@ -31,9 +31,10 @@
     [section addResultsFromArray:[spotlightResults copy]];
     [section setGroupId:[NSNumber numberWithInt:14]];
     [section setGroupName:[self title]];
-    [section setDomain:4];
+    [section setDomain: SPBResultSectionDomain];
     [section setBundleIdentifier:@"com.apple.calculator"];
-    [section setTitle: @"MENU_EXPRESSION"];
+    [section setTitle: @"SPBBridge"];
+    [section setPinToTop:[self pinToTop]];
     
     return section;
 }

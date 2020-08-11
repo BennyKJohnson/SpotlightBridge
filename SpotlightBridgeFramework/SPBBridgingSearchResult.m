@@ -14,23 +14,24 @@
     self = [super initWithContentType:nil displayName:searchResult.displayName];
     if (self) {
         self.searchResult = searchResult;
-         self.type = 2;
          
         NSString *identifier = [[[NSUUID alloc] init] UUIDString];
         self.identifier = identifier;
         
         NSString *calculatorBundleIdentifier = @"com.apple.calculator";
         self.sectionBundleIdentifier = calculatorBundleIdentifier;
+        
+        self.isLocalApplicationResult = true;
+        if ([searchResult isTopHit]) {
+            const int SpotlightTopHitValue = 2;
+            self.topHit = SpotlightTopHitValue;
+        }
     }
     
     return self;
 }
 
 -(unsigned long long)rank {
-    return 0xffffffffffffffff;
-}
-
--(unsigned long long)score {
     return 0xffffffffffffffff;
 }
 
@@ -56,6 +57,10 @@
 
 -(BOOL)openWithSearchString:(NSString*)searchString block:(void *)arg3 {
     return [self.searchResult openWithSearchString:searchString];
+}
+
+- (BOOL)isLocalResult {
+    return YES;
 }
 
 @end

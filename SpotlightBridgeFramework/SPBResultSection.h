@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "SPBSearchResult.h"
 
+extern int const SPBResultSectionDomain;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SPBResultSection : NSObject
@@ -16,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *title;
 
 @property (nonatomic, strong) NSArray *results;
+
+@property (nonatomic) BOOL pinToTop;
 
 -(instancetype) initWithTitle: (NSString *)title;
 

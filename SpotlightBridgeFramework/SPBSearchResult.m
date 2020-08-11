@@ -32,4 +32,8 @@
     return [SPBPreviewController shared];
 }
 
+-(BOOL)isTopHit {
+    return NO;
+}
+
 @end
