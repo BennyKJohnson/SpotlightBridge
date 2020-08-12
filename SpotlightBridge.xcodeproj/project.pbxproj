@@ -27,7 +27,6 @@
 		6FCB3A5324D53A5700121805 /* SPBBridgingSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB3A5124D53A5700121805 /* SPBBridgingSearchResult.m */; };
 		6FCB3A6024D8D4E100121805 /* SFResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCB3A5F24D8D4E100121805 /* SFResultSection.h */; };
 		6FD38DBA24CD8F940077C921 /* SpotlightBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DB824CD8F940077C921 /* SpotlightBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DD624CD90150077C921 /* SPBExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD724CD90160077C921 /* SPBQuery.m */; };
 		6FD38DE424CD90160077C921 /* SPBResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD824CD90160077C921 /* SPBResultSection.m */; };
 		6FD38DE524CD90160077C921 /* SPBSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DD924CD90160077C921 /* SPBSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,7 +78,6 @@
 		6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpotlightBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD38DB824CD8F940077C921 /* SpotlightBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpotlightBridge.h; sourceTree = "<group>"; };
 		6FD38DB924CD8F940077C921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FD38DD624CD90150077C921 /* SPBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBExtension.h; sourceTree = "<group>"; };
 		6FD38DD724CD90160077C921 /* SPBQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBQuery.m; sourceTree = "<group>"; };
 		6FD38DD824CD90160077C921 /* SPBResultSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBResultSection.m; sourceTree = "<group>"; };
 		6FD38DD924CD90160077C921 /* SPBSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBSearchResult.h; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				6FCB3A5F24D8D4E100121805 /* SFResultSection.h */,
 				6FD38DEE24CD905D0077C921 /* Headers */,
 				6FD38DB824CD8F940077C921 /* SpotlightBridge.h */,
-				6FD38DD624CD90150077C921 /* SPBExtension.h */,
 				6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */,
 				6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */,
 				6FD38DDE24CD90160077C921 /* SPBPreviewController.h */,
@@ -307,7 +304,6 @@
 				6FA464D224CE315500F3C8F8 /* PRSPreviewController.h in Headers */,
 				6FD38DE524CD90160077C921 /* SPBSearchResult.h in Headers */,
 				6FD38DE824CD90160077C921 /* SPBResultSection.h in Headers */,
-				6FD38DE224CD90160077C921 /* SPBExtension.h in Headers */,
 				6FD38DBA24CD8F940077C921 /* SpotlightBridge.h in Headers */,
 				6FD38DEB24CD90160077C921 /* SPBQuery.h in Headers */,
 				6FD38E0224CD905D0077C921 /* SFResultSection.h in Headers */,

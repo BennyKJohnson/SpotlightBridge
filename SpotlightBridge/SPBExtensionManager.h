@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void) loadExtensions;
 
--(NSArray*) extensionQueryClasses;
-
 @property (nonatomic, strong) NSString *applicationSupportSubPath;
 
 @property (nonatomic, strong) NSArray *extensions;

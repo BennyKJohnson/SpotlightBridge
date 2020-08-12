@@ -35,16 +35,7 @@
     self.extensions = [extensions copy];
 }
 
--(NSArray*) extensionQueryClasses {
-    NSMutableArray *extensionQueryClasses = [NSMutableArray array];
-    for (NSObject<SPBExtension> *extension in self.extensions) {
-        [extensionQueryClasses addObject:[extension queryClass]];
-    }
-        
-    return [extensionQueryClasses copy];
-}
-
-- (id) loadExtensionWithPath: (NSString *)path {
+- (Class) loadExtensionWithPath: (NSString *)path {
     NSBundle *extensionBundle = [NSBundle bundleWithPath:path];
     if (!extensionBundle || ![extensionBundle load]) {
         NSLog(@"SpotlightBridge failed to load extension at path %@", path);
@@ -53,7 +44,7 @@
     
     Class extensionPrincipalClass = [extensionBundle principalClass];
     if (extensionPrincipalClass && [self validateExtension:extensionPrincipalClass]) {
-        return [[extensionPrincipalClass alloc] init];
+        return extensionPrincipalClass;
     } else {
         NSLog(@"SpotlightBridge failed to load extension %@", [extensionBundle bundleIdentifier]);
         return NULL;
@@ -108,11 +99,7 @@
 }
 
 -(BOOL) validateExtension: (Class) extensionPrincipalClass {
-    if ([extensionPrincipalClass conformsToProtocol:@protocol(SPBExtension)]) {
-        return YES;
-    }
-    
-    return NO;
+    return [extensionPrincipalClass isSubclassOfClass:[SPBQuery class]];
 }
 
 @end

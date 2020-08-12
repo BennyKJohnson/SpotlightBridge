@@ -17,7 +17,7 @@
 hook(SPQueryTask)
 
 +(NSArray*)queryClasses {
-    NSArray *extensionQueryClasses = [[[SPBManager sharedInstance] extensionManager] extensionQueryClasses];
+    NSArray *extensionQueryClasses = [[[SPBManager sharedInstance] extensionManager] extensions];
     return [ZKOrig(NSArray*) arrayByAddingObjectsFromArray:extensionQueryClasses];
 }
 
