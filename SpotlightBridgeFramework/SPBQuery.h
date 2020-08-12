@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "SPKQuery.h"
-
+#import "SPBResponse.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SPBQuery : SPKQuery
 +(BOOL) isQuerySupported:(NSString *)query;
 -(id) initWithUserQuery:(NSString *)arg2 queryGroupId:(unsigned long long)arg3 options:(unsigned long long)arg4 keyboardLanguage:(id)arg5;
+-(void) performQuery:(NSString *)userQueryString withCompletionHandler:(void (^)(SPBResponse *response))completionHandler;
+
 @end
 
 NS_ASSUME_NONNULL_END

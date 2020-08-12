@@ -25,4 +25,17 @@
     return YES;
 }
 
+-(void) start {
+    [super start];
+    
+    [self performQuery:self.userQueryString withCompletionHandler:^(SPBResponse * _Nonnull response) {
+        self.responseHandler([response spotlightResponse]);
+    }];
+}
+
+-(void) performQuery:(NSString *)userQueryString withCompletionHandler:(void (^)(SPBResponse *response))completionHandler {
+    NSLog(@"SpotlightBridge performQuery should be overridden in subclass");
+    completionHandler(NULL);
+}
+
 @end
