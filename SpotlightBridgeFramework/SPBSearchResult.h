@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSImage*)iconImage;
 
+-(NSImage*)iconImageForApplication;
+
 @property (nonatomic, strong) NSString* displayName;
 
 -(BOOL)isTopHit;

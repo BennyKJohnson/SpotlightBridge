@@ -7,7 +7,7 @@
 //
 
 #import "SPBSearchResult.h"
-#import "SPBPreviewController.h"
+#import "SPBPlaceholderPreviewController.h"
 
 @implementation SPBSearchResult
 
@@ -28,8 +28,12 @@
     return [[NSWorkspace sharedWorkspace] iconForFile:@"/System/Library/CoreServices/Spotlight.app"];
 }
 
+-(NSImage*)iconImageForApplication {
+    return [self iconImage];
+}
+
 -(NSViewController*) previewViewController {
-    return [SPBPreviewController shared];
+    return [SPBPlaceholderPreviewController shared];
 }
 
 -(BOOL)isTopHit {

@@ -52,7 +52,7 @@
 }
 
 -(NSImage*)iconImageForApplication {
-    return [self iconImage];
+    return [self.searchResult iconImageForApplication];
 }
 
 -(BOOL)openWithSearchString:(NSString*)searchString block:(void *)arg3 {
