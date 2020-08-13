@@ -28,8 +28,12 @@
 -(void) start {
     [super start];
     
-    [self performQuery:self.userQueryString withCompletionHandler:^(SPBResponse * _Nonnull response) {
-        self.responseHandler([response spotlightResponse]);
+    [self performQuery:self.userQueryString withCompletionHandler:^(SPBResponse * response) {
+        if (response) {
+            self.responseHandler([response spotlightResponse]);
+        } else {
+            self.responseHandler(NULL);
+        }
     }];
 }
 
