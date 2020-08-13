@@ -9,22 +9,19 @@
 #import <Cocoa/Cocoa.h>
 #include <Availability.h>
 
-#ifdef __MAC_10_15
-#import "SPPreviewController.h"
-
-#endif
-#ifdef __MAC_10_14
-#import "PRSPreviewController.h"
-#define SPPreviewController PRSPreviewController
-#endif
+#import "SPBPreviewController.h"
 
 #import "SPBSearchResult.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SPBPreviewController : SPPreviewController
+@interface SPBPlaceholderPreviewController : SPBPreviewController
 
--(void)displayResult: (SPBSearchResult *)result;
+@property (weak) IBOutlet NSTextField *titleTextLabel;
+
++(SPBPreviewController*) shared;
+
+@property (strong, nonatomic) SPBSearchResult *searchResult;
 
 @end
 

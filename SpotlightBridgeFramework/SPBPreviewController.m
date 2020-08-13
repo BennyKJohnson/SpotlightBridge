@@ -7,7 +7,7 @@
 //
 
 #import "SPBPreviewController.h"
-#import "SPBSearchResult.h"
+#import "SPBBridgingSearchResult.h"
 
 @interface SPBPreviewController ()
 
@@ -15,21 +15,10 @@
 
 @implementation SPBPreviewController
 
-- (instancetype)init
-{
-    self = [super initWithNibName:@"SPBPreviewController" bundle: [NSBundle bundleWithIdentifier:@"benjamin.spotlightbridge.SpotlightBridgeFramework"]];
-    if (self) {
-        
-    }
-    return self;
+-(void)setRepresentedObject:(SPBBridgingSearchResult*)representedObject {
+    [self displayResult:representedObject.searchResult];
 }
 
-+(SPBPreviewController*) shared {
-    return [[SPBPreviewController alloc] init];
-}
-
--(void)setRepresentedObject:(SPBSearchResult*)representedObject {
-    [self.titleTextLabel setStringValue:[representedObject displayName]];
-}
+- (void)displayResult:(SPBSearchResult *)result {}
 
 @end

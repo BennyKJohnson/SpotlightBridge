@@ -16,6 +16,8 @@
 		6F0E30DA24CD895400B45588 /* SPBValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30D424CD895400B45588 /* SPBValidator.m */; };
 		6F0E30DD24CD89DE00B45588 /* ZKSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30DB24CD89DE00B45588 /* ZKSwizzle.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6F4FD06B24E1F9C200096B87 /* SPBRankingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FD06A24E1F9C200096B87 /* SPBRankingManager.m */; };
+		6F6B169624E5377B0041B8EF /* SPBPlaceholderPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B169524E5377B0041B8EF /* SPBPlaceholderPreviewController.m */; };
+		6F6B169824E537970041B8EF /* SPBPlaceholderPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F6B169724E537970041B8EF /* SPBPlaceholderPreviewController.h */; };
 		6F916C5724CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */; };
 		6F916C5824CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */; };
 		6F916C5B24CED9E400B42823 /* Spotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0724CD91080077C921 /* Spotlight.framework */; };
@@ -30,7 +32,7 @@
 		6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD724CD90160077C921 /* SPBQuery.m */; };
 		6FD38DE424CD90160077C921 /* SPBResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DD824CD90160077C921 /* SPBResultSection.m */; };
 		6FD38DE524CD90160077C921 /* SPBSearchResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DD924CD90160077C921 /* SPBSearchResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FD38DE624CD90160077C921 /* SPBPreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD38DDA24CD90160077C921 /* SPBPreviewController.xib */; };
+		6FD38DE624CD90160077C921 /* SPBPlaceholderPreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FD38DDA24CD90160077C921 /* SPBPlaceholderPreviewController.xib */; };
 		6FD38DE724CD90160077C921 /* SPBResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DDB24CD90160077C921 /* SPBResponse.m */; };
 		6FD38DE824CD90160077C921 /* SPBResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD38DDC24CD90160077C921 /* SPBResultSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6FD38DE924CD90160077C921 /* SPBSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD38DDD24CD90160077C921 /* SPBSearchResult.m */; };
@@ -68,6 +70,8 @@
 		6F0E30E324CD8D8C00B45588 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		6F4FD06924E1F9C200096B87 /* SPBRankingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBRankingManager.h; sourceTree = "<group>"; };
 		6F4FD06A24E1F9C200096B87 /* SPBRankingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBRankingManager.m; sourceTree = "<group>"; };
+		6F6B169524E5377B0041B8EF /* SPBPlaceholderPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBPlaceholderPreviewController.m; sourceTree = "<group>"; };
+		6F6B169724E537970041B8EF /* SPBPlaceholderPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBPlaceholderPreviewController.h; sourceTree = "<group>"; };
 		6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SPBResultSection+SFMutableResultSection.h"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.h"; sourceTree = SOURCE_ROOT; };
 		6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SPBResultSection+SFMutableResultSection.m"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.m"; sourceTree = SOURCE_ROOT; };
 		6F916C5E24CEDB2900B42823 /* ParsecUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParsecUI.framework; path = ../../../../System/Library/PrivateFrameworks/ParsecUI.framework; sourceTree = "<group>"; };
@@ -81,7 +85,7 @@
 		6FD38DD724CD90160077C921 /* SPBQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBQuery.m; sourceTree = "<group>"; };
 		6FD38DD824CD90160077C921 /* SPBResultSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBResultSection.m; sourceTree = "<group>"; };
 		6FD38DD924CD90160077C921 /* SPBSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBSearchResult.h; sourceTree = "<group>"; };
-		6FD38DDA24CD90160077C921 /* SPBPreviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPBPreviewController.xib; sourceTree = "<group>"; };
+		6FD38DDA24CD90160077C921 /* SPBPlaceholderPreviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPBPlaceholderPreviewController.xib; sourceTree = "<group>"; };
 		6FD38DDB24CD90160077C921 /* SPBResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBResponse.m; sourceTree = "<group>"; };
 		6FD38DDC24CD90160077C921 /* SPBResultSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBResultSection.h; sourceTree = "<group>"; };
 		6FD38DDD24CD90160077C921 /* SPBSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBSearchResult.m; sourceTree = "<group>"; };
@@ -207,7 +211,9 @@
 				6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */,
 				6FD38DDE24CD90160077C921 /* SPBPreviewController.h */,
 				6FD38DE124CD90160077C921 /* SPBPreviewController.m */,
-				6FD38DDA24CD90160077C921 /* SPBPreviewController.xib */,
+				6F6B169724E537970041B8EF /* SPBPlaceholderPreviewController.h */,
+				6F6B169524E5377B0041B8EF /* SPBPlaceholderPreviewController.m */,
+				6FD38DDA24CD90160077C921 /* SPBPlaceholderPreviewController.xib */,
 				6FD38DDF24CD90160077C921 /* SPBQuery.h */,
 				6FD38DD724CD90160077C921 /* SPBQuery.m */,
 				6FD38DE024CD90160077C921 /* SPBResponse.h */,
@@ -300,6 +306,7 @@
 				6FD38DFE24CD905D0077C921 /* SPKResponse.h in Headers */,
 				6FD38E0124CD905D0077C921 /* SFSearchResult_SpotlightExtras.h in Headers */,
 				6FD38E0024CD905D0077C921 /* SPPreviewController.h in Headers */,
+				6F6B169824E537970041B8EF /* SPBPlaceholderPreviewController.h in Headers */,
 				6FD38E0324CD905D0077C921 /* SFSearchResult.h in Headers */,
 				6FA464D224CE315500F3C8F8 /* PRSPreviewController.h in Headers */,
 				6FD38DE524CD90160077C921 /* SPBSearchResult.h in Headers */,
@@ -402,7 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FD38DE624CD90160077C921 /* SPBPreviewController.xib in Resources */,
+				6FD38DE624CD90160077C921 /* SPBPlaceholderPreviewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +439,7 @@
 				6FD38DE424CD90160077C921 /* SPBResultSection.m in Sources */,
 				6FCB3A5324D53A5700121805 /* SPBBridgingSearchResult.m in Sources */,
 				6FD38DE924CD90160077C921 /* SPBSearchResult.m in Sources */,
+				6F6B169624E5377B0041B8EF /* SPBPlaceholderPreviewController.m in Sources */,
 				6FD38DE324CD90160077C921 /* SPBQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
