@@ -24,6 +24,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(NSViewController*) previewViewController;
 
+-(float) maxScore;
+
+-(float) score;
+
 @end
 
 NS_ASSUME_NONNULL_END

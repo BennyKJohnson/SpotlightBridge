@@ -36,4 +36,12 @@
     return NO;
 }
 
+-(float) maxScore {
+    return 100;
+}
+
+-(float) score {
+    return 50;
+}
+
 @end

@@ -18,6 +18,5 @@ FOUNDATION_EXPORT const unsigned char SpotlightBridgeFrameworkVersionString[];
 #import <SpotlightBridge/SPBSearchResult.h>
 #import <SpotlightBridge/SPBQuery.h>
 #import <SpotlightBridge/SPBResponse.h>
-#import <SpotlightBridge/SPBExtension.h>
 #import <SpotlightBridge/SPBPreviewController.h>
 

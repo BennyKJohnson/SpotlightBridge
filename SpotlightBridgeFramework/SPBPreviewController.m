@@ -23,17 +23,6 @@
     }
     return self;
 }
-//
-//- (void)preheat:(id)searchResult row:(int)arg2 generation:(int)arg3 {
-//    NSLog(@"prehead was called");
-//    
-//    SPBSearchResult *result = (SPBSearchResult*) searchResult;
-//    [self setSearchResult:searchResult];
-//    
-//  //  [self.titleTextLabel setStringValue:result.displayName];
-//    
-//    [super preheat:searchResult row:arg2 generation:arg3];
-//}
 
 +(SPBPreviewController*) shared {
     return [[SPBPreviewController alloc] init];
