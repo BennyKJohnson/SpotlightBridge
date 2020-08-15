@@ -18,6 +18,18 @@
 		6F4FD06B24E1F9C200096B87 /* SPBRankingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FD06A24E1F9C200096B87 /* SPBRankingManager.m */; };
 		6F6B169624E5377B0041B8EF /* SPBPlaceholderPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6B169524E5377B0041B8EF /* SPBPlaceholderPreviewController.m */; };
 		6F6B169824E537970041B8EF /* SPBPlaceholderPreviewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F6B169724E537970041B8EF /* SPBPlaceholderPreviewController.h */; };
+		6F77148624E7482100CBA340 /* SpotlightBridgeFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77148524E7482100CBA340 /* SpotlightBridgeFrameworkTests.m */; };
+		6F77148824E7482100CBA340 /* SpotlightBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */; };
+		6F77148F24E7485600CBA340 /* SPBPreviewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77148E24E7485600CBA340 /* SPBPreviewControllerTests.m */; };
+		6F77149224E7495E00CBA340 /* SPBTestPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77149124E7495E00CBA340 /* SPBTestPreviewController.m */; };
+		6F77149324E74A8E00CBA340 /* SPBBridgingSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB3A5124D53A5700121805 /* SPBBridgingSearchResult.m */; };
+		6F77149424E74B2100CBA340 /* Spotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0724CD91080077C921 /* Spotlight.framework */; };
+		6F77149624E7528C00CBA340 /* SPBResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77149524E7528C00CBA340 /* SPBResultSection.m */; };
+		6F7714A424E757E200CBA340 /* SPBExtensionManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7714A324E757E200CBA340 /* SPBExtensionManagerTests.m */; };
+		6F7714A524E7581000CBA340 /* SPBExtensionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0E30D324CD895400B45588 /* SPBExtensionManager.m */; };
+		6F7714A624E7587F00CBA340 /* SpotlightBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */; };
+		6F7714C224E75CB700CBA340 /* SPBTestExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6F7714C124E75CB700CBA340 /* SPBTestExtension.bundle */; };
+		6F7714C524E75F0E00CBA340 /* SPBTestExtensionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7714C424E75F0E00CBA340 /* SPBTestExtensionManager.m */; };
 		6F916C5724CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */; };
 		6F916C5824CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */; };
 		6F916C5B24CED9E400B42823 /* Spotlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38E0724CD91080077C921 /* Spotlight.framework */; };
@@ -51,6 +63,16 @@
 		6FD38E0B24CD914E0077C921 /* SpotlightBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6F77148924E7482100CBA340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F0E30AE24CD891D00B45588 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FD38DB524CD8F940077C921;
+			remoteInfo = SpotlightBridgeFramework;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F0E30B924CD891D00B45588 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -72,6 +94,19 @@
 		6F4FD06A24E1F9C200096B87 /* SPBRankingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBRankingManager.m; sourceTree = "<group>"; };
 		6F6B169524E5377B0041B8EF /* SPBPlaceholderPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPBPlaceholderPreviewController.m; sourceTree = "<group>"; };
 		6F6B169724E537970041B8EF /* SPBPlaceholderPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPBPlaceholderPreviewController.h; sourceTree = "<group>"; };
+		6F77148324E7482100CBA340 /* SpotlightBridgeFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightBridgeFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F77148524E7482100CBA340 /* SpotlightBridgeFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpotlightBridgeFrameworkTests.m; sourceTree = "<group>"; };
+		6F77148724E7482100CBA340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F77148E24E7485600CBA340 /* SPBPreviewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBPreviewControllerTests.m; sourceTree = "<group>"; };
+		6F77149024E7495E00CBA340 /* SPBTestPreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBTestPreviewController.h; sourceTree = "<group>"; };
+		6F77149124E7495E00CBA340 /* SPBTestPreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBTestPreviewController.m; sourceTree = "<group>"; };
+		6F77149524E7528C00CBA340 /* SPBResultSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBResultSection.m; sourceTree = "<group>"; };
+		6F77149B24E757BB00CBA340 /* SpotlightBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotlightBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F77149F24E757BB00CBA340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F7714A324E757E200CBA340 /* SPBExtensionManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBExtensionManagerTests.m; sourceTree = "<group>"; };
+		6F7714C124E75CB700CBA340 /* SPBTestExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SPBTestExtension.bundle; sourceTree = "<group>"; };
+		6F7714C324E75F0E00CBA340 /* SPBTestExtensionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPBTestExtensionManager.h; sourceTree = "<group>"; };
+		6F7714C424E75F0E00CBA340 /* SPBTestExtensionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPBTestExtensionManager.m; sourceTree = "<group>"; };
 		6F916C5524CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SPBResultSection+SFMutableResultSection.h"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.h"; sourceTree = SOURCE_ROOT; };
 		6F916C5624CEB70C00B42823 /* SPBResultSection+SFMutableResultSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SPBResultSection+SFMutableResultSection.m"; path = "SpotlightBridgeFramework/SPBResultSection+SFMutableResultSection.m"; sourceTree = SOURCE_ROOT; };
 		6F916C5E24CEDB2900B42823 /* ParsecUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParsecUI.framework; path = ../../../../System/Library/PrivateFrameworks/ParsecUI.framework; sourceTree = "<group>"; };
@@ -117,6 +152,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F77148024E7482100CBA340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F77148824E7482100CBA340 /* SpotlightBridge.framework in Frameworks */,
+				6F77149424E74B2100CBA340 /* Spotlight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F77149824E757BB00CBA340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F7714A624E7587F00CBA340 /* SpotlightBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FD38DB324CD8F940077C921 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +188,8 @@
 			children = (
 				6F0E30BD24CD891D00B45588 /* SpotlightBridge */,
 				6FD38DB724CD8F940077C921 /* SpotlightBridgeFramework */,
+				6F77148424E7482100CBA340 /* SpotlightBridgeFrameworkTests */,
+				6F77149C24E757BB00CBA340 /* SpotlightBridgeTests */,
 				6F0E30B824CD891D00B45588 /* Frameworks */,
 				6F0E30B724CD891D00B45588 /* Products */,
 			);
@@ -146,6 +200,8 @@
 			children = (
 				6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */,
 				6FD38DB624CD8F940077C921 /* SpotlightBridge.framework */,
+				6F77148324E7482100CBA340 /* SpotlightBridgeFrameworkTests.xctest */,
+				6F77149B24E757BB00CBA340 /* SpotlightBridgeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +255,31 @@
 				6F0E30DB24CD89DE00B45588 /* ZKSwizzle.m */,
 			);
 			path = ZKSwizzle;
+			sourceTree = "<group>";
+		};
+		6F77148424E7482100CBA340 /* SpotlightBridgeFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F77148524E7482100CBA340 /* SpotlightBridgeFrameworkTests.m */,
+				6F77148724E7482100CBA340 /* Info.plist */,
+				6F77148E24E7485600CBA340 /* SPBPreviewControllerTests.m */,
+				6F77149024E7495E00CBA340 /* SPBTestPreviewController.h */,
+				6F77149124E7495E00CBA340 /* SPBTestPreviewController.m */,
+				6F77149524E7528C00CBA340 /* SPBResultSection.m */,
+			);
+			path = SpotlightBridgeFrameworkTests;
+			sourceTree = "<group>";
+		};
+		6F77149C24E757BB00CBA340 /* SpotlightBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				6F7714C124E75CB700CBA340 /* SPBTestExtension.bundle */,
+				6F77149F24E757BB00CBA340 /* Info.plist */,
+				6F7714A324E757E200CBA340 /* SPBExtensionManagerTests.m */,
+				6F7714C324E75F0E00CBA340 /* SPBTestExtensionManager.h */,
+				6F7714C424E75F0E00CBA340 /* SPBTestExtensionManager.m */,
+			);
+			path = SpotlightBridgeTests;
 			sourceTree = "<group>";
 		};
 		6FD38DB724CD8F940077C921 /* SpotlightBridgeFramework */ = {
@@ -342,6 +423,41 @@
 			productReference = 6F0E30B624CD891D00B45588 /* SpotlightBridge.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
+		6F77148224E7482100CBA340 /* SpotlightBridgeFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F77148B24E7482100CBA340 /* Build configuration list for PBXNativeTarget "SpotlightBridgeFrameworkTests" */;
+			buildPhases = (
+				6F77147F24E7482100CBA340 /* Sources */,
+				6F77148024E7482100CBA340 /* Frameworks */,
+				6F77148124E7482100CBA340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F77148A24E7482100CBA340 /* PBXTargetDependency */,
+			);
+			name = SpotlightBridgeFrameworkTests;
+			productName = SpotlightBridgeFrameworkTests;
+			productReference = 6F77148324E7482100CBA340 /* SpotlightBridgeFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6F77149A24E757BB00CBA340 /* SpotlightBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F7714A024E757BB00CBA340 /* Build configuration list for PBXNativeTarget "SpotlightBridgeTests" */;
+			buildPhases = (
+				6F77149724E757BB00CBA340 /* Sources */,
+				6F77149824E757BB00CBA340 /* Frameworks */,
+				6F77149924E757BB00CBA340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotlightBridgeTests;
+			productName = SpotlightBridgeTests;
+			productReference = 6F77149B24E757BB00CBA340 /* SpotlightBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6FD38DB524CD8F940077C921 /* SpotlightBridgeFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6FD38DBD24CD8F940077C921 /* Build configuration list for PBXNativeTarget "SpotlightBridgeFramework" */;
@@ -372,6 +488,12 @@
 					6F0E30B524CD891D00B45588 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					6F77148224E7482100CBA340 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					6F77149A24E757BB00CBA340 = {
+						CreatedOnToolsVersion = 11.6;
+					};
 					6FD38DB524CD8F940077C921 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -392,6 +514,8 @@
 			targets = (
 				6F0E30B524CD891D00B45588 /* SpotlightBridge */,
 				6FD38DB524CD8F940077C921 /* SpotlightBridgeFramework */,
+				6F77148224E7482100CBA340 /* SpotlightBridgeFrameworkTests */,
+				6F77149A24E757BB00CBA340 /* SpotlightBridgeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -402,6 +526,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F0E30C924CD891D00B45588 /* PrefixHeader.pch in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F77148124E7482100CBA340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F77149924E757BB00CBA340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F7714C224E75CB700CBA340 /* SPBTestExtension.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +568,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F77147F24E7482100CBA340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F77149324E74A8E00CBA340 /* SPBBridgingSearchResult.m in Sources */,
+				6F77148F24E7485600CBA340 /* SPBPreviewControllerTests.m in Sources */,
+				6F77149624E7528C00CBA340 /* SPBResultSection.m in Sources */,
+				6F77148624E7482100CBA340 /* SpotlightBridgeFrameworkTests.m in Sources */,
+				6F77149224E7495E00CBA340 /* SPBTestPreviewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F77149724E757BB00CBA340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F7714C524E75F0E00CBA340 /* SPBTestExtensionManager.m in Sources */,
+				6F7714A424E757E200CBA340 /* SPBExtensionManagerTests.m in Sources */,
+				6F7714A524E7581000CBA340 /* SPBExtensionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6FD38DB224CD8F940077C921 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +606,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F77148A24E7482100CBA340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FD38DB524CD8F940077C921 /* SpotlightBridgeFramework */;
+			targetProxy = 6F77148924E7482100CBA340 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6F0E30CA24CD891D00B45588 /* Debug */ = {
@@ -592,6 +761,86 @@
 			};
 			name = Release;
 		};
+		6F77148C24E7482100CBA340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotlightBridgeFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Debug;
+		};
+		6F77148D24E7482100CBA340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotlightBridgeFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Release;
+		};
+		6F7714A124E757BB00CBA340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotlightBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6F7714A224E757BB00CBA340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SpotlightBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = benjamin.spotlightbridge.SpotlightBridgeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		6FD38DBB24CD8F940077C921 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -679,6 +928,24 @@
 			buildConfigurations = (
 				6F0E30CD24CD891D00B45588 /* Debug */,
 				6F0E30CE24CD891D00B45588 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F77148B24E7482100CBA340 /* Build configuration list for PBXNativeTarget "SpotlightBridgeFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F77148C24E7482100CBA340 /* Debug */,
+				6F77148D24E7482100CBA340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F7714A024E757BB00CBA340 /* Build configuration list for PBXNativeTarget "SpotlightBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F7714A124E757BB00CBA340 /* Debug */,
+				6F7714A224E757BB00CBA340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

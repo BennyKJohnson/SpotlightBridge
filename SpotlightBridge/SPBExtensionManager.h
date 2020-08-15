@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void) loadExtensions;
 
+- (Class) loadExtensionWithPath: (NSString *)path;
+
 @property (nonatomic, strong) NSString *applicationSupportSubPath;
 
 @property (nonatomic, strong) NSArray *extensions;

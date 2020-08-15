@@ -65,7 +65,6 @@
 }
 
 -(NSArray *)bundleSearchPaths {
-    NSString *appSupportSubpath = @"Application Support/SpotlightBridge";
     NSMutableArray *bundleSearchPaths = [NSMutableArray array];
      
     // Find Library directories in all domains except /System
@@ -74,7 +73,7 @@
     
     for (NSString *currentPath in librarySearchPaths) {
         [bundleSearchPaths addObject:
-            [currentPath stringByAppendingPathComponent:appSupportSubpath]];
+         [currentPath stringByAppendingPathComponent:self.applicationSupportSubPath]];
     }
 
     return [bundleSearchPaths copy];

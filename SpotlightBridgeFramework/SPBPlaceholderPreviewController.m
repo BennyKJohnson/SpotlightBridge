@@ -28,10 +28,8 @@
     return [[SPBPlaceholderPreviewController alloc] init];
 }
 
--(void)setRepresentedObject:(SPBSearchResult*)representedObject {
-    [self.titleTextLabel setStringValue:[representedObject displayName]];
+- (void)displayResult:(SPBSearchResult *)result {
+    [self.titleTextLabel setStringValue:[result displayName]];
 }
-
-
 
 @end
