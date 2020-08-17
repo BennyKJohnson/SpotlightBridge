@@ -18,6 +18,15 @@
 
 @implementation SPBManager
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+     //   self.localizedGroupNameByGroupName = [NSMutableDictionary dictionary];
+    }
+    return self;
+}
+
 /**
  * @return the single static instance of the plugin object
  */

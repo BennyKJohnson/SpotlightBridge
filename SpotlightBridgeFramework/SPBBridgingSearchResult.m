@@ -7,6 +7,7 @@
 //
 
 #import "SPBBridgingSearchResult.h"
+#include <Availability.h>
 
 @implementation SPBBridgingSearchResult
 
@@ -14,18 +15,24 @@
     self = [super initWithContentType:nil displayName:searchResult.displayName];
     if (self) {
         self.searchResult = searchResult;
-         
-        NSString *identifier = [[[NSUUID alloc] init] UUIDString];
-        self.identifier = identifier;
         
-        NSString *calculatorBundleIdentifier = @"com.apple.calculator";
-        self.sectionBundleIdentifier = calculatorBundleIdentifier;
-        
-        self.isLocalApplicationResult = true;
-        if ([searchResult isTopHit]) {
-            const int SpotlightTopHitValue = 2;
-            self.topHit = SpotlightTopHitValue;
+        if ([self respondsToSelector:@selector(setIdentifier:)]) {
+            NSString *identifier = [[[NSUUID alloc] init] UUIDString];
+            self.identifier = identifier;
         }
+
+        if ([self respondsToSelector:@selector(setSectionBundleIdentifier:)]) {
+            NSString *calculatorBundleIdentifier = @"com.apple.calculator";
+            self.sectionBundleIdentifier = calculatorBundleIdentifier;
+        }
+
+        #ifdef __MAC_10_15
+            self.isLocalApplicationResult = true;
+            if ([searchResult isTopHit]) {
+                const int SpotlightTopHitValue = 2;
+                self.topHit = SpotlightTopHitValue;
+            }
+        #endif
     }
     
     return self;
@@ -36,11 +43,11 @@
 }
 
 -(NSString*)groupName {
-    return @"MENU_EXPRESSION";
+    return self.sectionName;
 }
 
--(NSString *) category {
-    return @"MENU_EXPRESSION";
+-(NSString *)category {
+    return self.sectionName;
 }
 
 -(id)sharedCustomPreviewController {

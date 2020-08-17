@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) SPBSearchResult *searchResult;
 
+@property (nonatomic, strong) NSString *sectionName;
+
 -(instancetype) initWithSearchResult: (SPBSearchResult*)searchResult;
 
 -(NSImage*)iconImage;

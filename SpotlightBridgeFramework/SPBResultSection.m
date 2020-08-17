@@ -8,6 +8,7 @@
 
 #import "SPBResultSection.h"
 #import "SPBSearchResult.h"
+#import "SPBBridgingSearchResult.h"
 
 const int SPBResultSectionDomain = 1000;
 const int SPBResultSectionGroupID = 8080;
@@ -22,6 +23,18 @@ const int SPBResultSectionGroupID = 8080;
     }
     
     return self;
+}
+
+- (NSArray *)spotlightResults {
+    NSMutableArray *spotlightResults = [NSMutableArray array];
+    
+    for (SPBSearchResult *result in self.results) {
+        SPBBridgingSearchResult *spotlightResult = [[SPBBridgingSearchResult alloc]initWithSearchResult:result];
+        spotlightResult.sectionName = self.title;
+        [spotlightResults addObject:spotlightResult];
+    }
+    
+    return [spotlightResults copy];
 }
 
 @end

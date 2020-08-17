@@ -21,14 +21,9 @@
     }
     
     SFMutableResultSection *section = [[SFMutableResultSection alloc]init];
-    NSMutableArray *spotlightResults = [NSMutableArray array];
+    NSArray *spotlightResults = [self spotlightResults];
     
-    for (SPBSearchResult *result in self.results) {
-        SPBBridgingSearchResult *spotlightResult = [[SPBBridgingSearchResult alloc]initWithSearchResult:result];
-        [spotlightResults addObject:spotlightResult];
-    }
-    
-    [section addResultsFromArray:[spotlightResults copy]];
+    [section addResultsFromArray:spotlightResults];
     [section setGroupId:[NSNumber numberWithInt:SPBResultSectionGroupID]];
     [section setGroupName:[self title]];
     [section setDomain: SPBResultSectionDomain];

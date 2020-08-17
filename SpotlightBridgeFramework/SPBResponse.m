@@ -12,6 +12,7 @@
 #import "SPBResultSection.h"
 #import "SPBResultSection+SFMutableResultSection.h"
 #import "SFMutableResultSection.h"
+#import "SPBBridgingSearchResult.h"
 #include <Availability.h>
 
 @implementation SPBResponse
@@ -48,8 +49,8 @@
 
 -(SPKResponse *) spotlightResponseForMojave {
     SPKResponse *response;
-    
-    NSArray *results = [[self sections][0] results];
+    SPBResultSection *section = [self sections][0];
+    NSArray *results = [section spotlightResults];
     response = [[SPKResponse alloc]initWithQueryID:[self queryId] kind:2 results:results];
     
     return response;

@@ -38,7 +38,7 @@ static Class classFromInfo(const char *info) {
         return NULL;
     }
     
-    char after_bracket[255];
+    char after_bracket[512];
     memcpy(after_bracket, &info[bracket_index], strlen(info) - bracket_index - 1);
     
     for (NSUInteger i = 0; i < strlen(info); i++) {

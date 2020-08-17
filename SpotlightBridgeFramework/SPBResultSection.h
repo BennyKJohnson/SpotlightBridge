@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(instancetype) initWithTitle: (NSString *)title;
 
+-(NSArray*)spotlightResults;
 
 @end
 
