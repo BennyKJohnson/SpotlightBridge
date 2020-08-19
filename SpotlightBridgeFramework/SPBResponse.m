@@ -15,6 +15,8 @@
 #import "SPBBridgingSearchResult.h"
 #include <Availability.h>
 
+int SPKResponseKind = 2;
+
 @implementation SPBResponse
 
 -(SPKResponse*) spotlightResponse {
@@ -42,18 +44,18 @@
         [spotlightResultSections addObject:sfResultSection];
     }
      
-    SPKResponse *response = [[SPKResponse alloc] initWithQueryID:[self queryId] kind: 2 sections:[spotlightResultSections copy]];
+    SPKResponse *response = [[SPKResponse alloc] initWithQueryID:[self queryId] kind: SPKResponseKind sections:[spotlightResultSections copy]];
     
     return response;
 }
 
 -(SPKResponse *) spotlightResponseForMojave {
-    SPKResponse *response;
-    SPBResultSection *section = [self sections][0];
-    NSArray *results = [section spotlightResults];
-    response = [[SPKResponse alloc]initWithQueryID:[self queryId] kind:2 results:results];
-    
-    return response;
+    NSMutableArray *results = [NSMutableArray array];
+    for (SPBResultSection *section in self.sections) {
+        [results addObjectsFromArray:[section spotlightResults]];
+    }
+
+    return [[SPKResponse alloc]initWithQueryID:[self queryId] kind: SPKResponseKind results:[results copy]];
 }
 
 @end

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) float score;
 
+@property (nonatomic) BOOL topHit;
+
 
 @end
 

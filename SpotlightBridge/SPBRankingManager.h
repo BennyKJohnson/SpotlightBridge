@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(void)insertSpotlightBridgeCategoriesFromGroupedResults: (NSDictionary*)groupedResults intoRankedCategories:(NSMutableArray*)categories;
 
++(NSArray*)chooseTopHits: (NSArray *)topHits sortedResults: (id)results;
+
 @end
 
 NS_ASSUME_NONNULL_END

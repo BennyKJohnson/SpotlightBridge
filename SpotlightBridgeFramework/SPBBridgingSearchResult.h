@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PRSCalculatorResult.h"
+
+#include <Availability.h>
+
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 101500
+#import "Headers/10.15/Spotlight/PRSCalculatorResult.h"
+#else
+#import "Headers/10.14/PRSCalculatorResult.h"
+#endif
+
 #import "SPBSearchResult.h"
 
 

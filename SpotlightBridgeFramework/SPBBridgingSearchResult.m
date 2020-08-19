@@ -16,6 +16,7 @@
     if (self) {
         self.searchResult = searchResult;
         
+        #ifdef __MAC_10_15
         if ([self respondsToSelector:@selector(setIdentifier:)]) {
             NSString *identifier = [[[NSUUID alloc] init] UUIDString];
             self.identifier = identifier;
@@ -26,12 +27,11 @@
             self.sectionBundleIdentifier = calculatorBundleIdentifier;
         }
 
-        #ifdef __MAC_10_15
-            self.isLocalApplicationResult = true;
-            if ([searchResult isTopHit]) {
-                const int SpotlightTopHitValue = 2;
-                self.topHit = SpotlightTopHitValue;
-            }
+        self.isLocalApplicationResult = true;
+        if ([searchResult isTopHit]) {
+            const int SpotlightTopHitValue = 2;
+            self.topHit = SpotlightTopHitValue;
+        }
         #endif
     }
     

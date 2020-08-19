@@ -54,6 +54,7 @@ hook(SPQueryTask)
 endhook
 
 hook(PRSRankingManager)
+
 /* Required to ensure the Spotlight Bridge grouped results will be included with the final results in the preferred arrangement */
 - (void)getRankedCategoriesForQuery:(id)arg1 meanScores:(id)meanScores maxScores:(id)arg3 standardDeviation:(id)arg4 sectionHeaderToBundleIdMapping:(id)arg5 bundleIdToSectionHeaderMapping:(id)arg6 rankingConfiguration:(id)arg7 placements:(id)arg8 topCategories:(id *)topCategoriesPtr bottomCategories:(id *)arg10 blacklistedCategories:(id *)arg11 sessionIdentifier:(unsigned long long)arg12 logString:(id)arg13 cepsUsed:(id)arg14 poorTextMatchCategories:(id)arg15 {
     ZKOrig(void, arg1, meanScores, arg3, arg4, arg5, arg6, arg7, arg8, topCategoriesPtr, arg10, arg11, arg12, arg13, arg14, arg15);
@@ -64,6 +65,12 @@ hook(PRSRankingManager)
     NSDictionary *groupedResults = [rankingManager groupedResults];
     
     [SPBRankingManager insertSpotlightBridgeCategoriesFromGroupedResults:groupedResults intoRankedCategories:topCategories];
+}
+
+/* Ensures that Spotlight respects the top hit setting on the spotlight bridge result */
+- (id)chooseTopHitsWithMaxCount:(unsigned long long)arg1 disabledGroups:(id)arg2 topHit:(id)arg3 queryString:(id)arg4 cumulativeTopHitSet:(id)arg5 sortedResults:(id)arg6 {
+    NSArray *topHits = ZKOrig(id, arg1, arg2, arg3, arg4, arg5, arg6);
+    return [SPBRankingManager chooseTopHits:topHits sortedResults:arg6];
 }
 
 endhook

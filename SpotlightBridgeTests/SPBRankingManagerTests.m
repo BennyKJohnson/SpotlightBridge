@@ -10,6 +10,7 @@
 #import "SPBBridgingSearchResult.h"
 #import "SPBTestSearchResult.h"
 #import "SPBRankingManager.h"
+#import "SPBStandardSearchResult.h"
 
 @interface SPBRankingManagerTests : XCTestCase
 
@@ -56,10 +57,31 @@
     XCTAssertTrue([rankedCategories isEqualToArray: expectedArray]);
 }
 
+-(void)testChooseTopHitsSortedResults {
+    SPBBridgingSearchResult *falseNegativeTopHitResult = [self createBridgingSearchResultWithTopHit:YES];
+    SPBBridgingSearchResult *falsePositiveTopHitResult = [self createBridgingSearchResultWithTopHit:NO];
+    SPBStandardSearchResult *spotlightSearchResult  = [[SPBStandardSearchResult alloc] initWithContentType:NULL displayName:@""];
+
+    NSArray *originalTopHits = @[
+        spotlightSearchResult,
+        falsePositiveTopHitResult
+    ];
+    
+    NSArray *topHits = [SPBRankingManager chooseTopHits:originalTopHits sortedResults:@[ falseNegativeTopHitResult ]];
+    NSArray *expectedTopHits = @[spotlightSearchResult, falseNegativeTopHitResult];
+    XCTAssertTrue([topHits isEqualToArray:expectedTopHits]);
+}
+
 -(SPBBridgingSearchResult*)createBridgingSearchResultWithScore: (float)score {
     SPBTestSearchResult *searchResult = [[SPBTestSearchResult alloc] initWithDisplayName:@""];
     searchResult.score = score;
     
+    return [[SPBBridgingSearchResult alloc] initWithSearchResult:searchResult];
+}
+
+-(SPBBridgingSearchResult *)createBridgingSearchResultWithTopHit: (BOOL)topHit {
+    SPBTestSearchResult *searchResult = [[SPBTestSearchResult alloc] initWithDisplayName:@""];
+    searchResult.topHit = topHit;
     return [[SPBBridgingSearchResult alloc] initWithSearchResult:searchResult];
 }
 

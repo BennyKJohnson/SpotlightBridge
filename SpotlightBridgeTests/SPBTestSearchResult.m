@@ -10,5 +10,7 @@
 
 @implementation SPBTestSearchResult
 
-
+-(BOOL)isTopHit {
+    return self.topHit;
+}
 @end
