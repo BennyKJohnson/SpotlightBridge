@@ -1,11 +1,3 @@
-//
-//  SPBResultSection+SPBResultSearction_SFMutableResultSection.h
-//  SpotlightBridgeFramework
-//
-//  Created by Benjamin Johnson on 27/7/20.
-//  Copyright © 2020 Benjamin Johnson. All rights reserved.
-//
-
 #import "SPBResultSection.h"
 
 //@class SFMutableResultSection;

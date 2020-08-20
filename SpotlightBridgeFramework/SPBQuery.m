@@ -1,15 +1,9 @@
-//
-//  SPBQuery.m
-//  SpotlightBridgeFramework
-//
-//  Created by Benjamin Johnson on 14/7/20.
-//  Copyright © 2020 Benjamin Johnson. All rights reserved.
-//
 
 #import "SPBQuery.h"
 #import "SPBSearchResult.h"
 #import "SPBResponse.h"
 #import "SPBResultSection.h"
+#import "SPKResponse+SPBResponse.h"
 
 @implementation SPBQuery
 
@@ -30,7 +24,8 @@
     
     [self performQuery:self.userQueryString withCompletionHandler:^(SPBResponse * response) {
         if (response) {
-            self.responseHandler([response spotlightResponse]);
+            SPKResponse *convertedResponse = [[SPKResponse alloc] initWithBridgedResponse:response];
+            self.responseHandler(convertedResponse);
         } else {
             self.responseHandler(NULL);
         }
