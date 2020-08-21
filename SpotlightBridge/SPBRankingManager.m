@@ -7,46 +7,48 @@
 //
 
 #import "SPBRankingManager.h"
-#import "SFMutableResultSection.h"
-#import "SPBResultSection.h"
 #import "SPBBridgingSearchResult.h"
 
 @implementation SPBRankingManager
 
 // Required for Mojave. Remove this method once it is known why bridged results are thrown out in the rankAndPrune method
-+ (NSMutableDictionary*)mergeSpotlightBridgeResultsWithRankedAndPrunedResults: (NSMutableDictionary*)rankedAndPrunedResults resultsByGroupName: (NSMutableDictionary*)resultsByGroupName {
-    NSMutableArray *spotlightBridgeGroupKeys = [NSMutableArray array];
++ (NSMutableDictionary*)mergeBridgeResultsWithRankedAndPrunedResults: (NSMutableDictionary*)rankedAndPrunedResults resultsByGroupName: (NSMutableDictionary*)resultsByGroupName {
+    NSArray *bridgedGroupNames = [self bridgedGroupNamesForResultsByGroupName:resultsByGroupName];
+    NSDictionary *prunedBridgedGroupResults = [self pruneGroupedResults:resultsByGroupName forGroupNames:bridgedGroupNames];
     
-    for (NSString * groupName in [resultsByGroupName allKeys]) {
-        if ([resultsByGroupName[groupName] count]) {
-            id firstResultOfGroup = resultsByGroupName[groupName][0];
-            if ([firstResultOfGroup isKindOfClass:[SPBBridgingSearchResult class]]) {
-                [spotlightBridgeGroupKeys addObject:groupName];
-            }
-        }
-    }
-    
-    for (NSString *spotlightBridgeGroupName in spotlightBridgeGroupKeys) {
-        NSArray *results = resultsByGroupName[spotlightBridgeGroupName];
-        
-        int maximumNumberOfResultsPerGroup = 5;
-        int numberOfItemsToInclude = MIN((int)[results count], maximumNumberOfResultsPerGroup);
-        rankedAndPrunedResults[spotlightBridgeGroupName] = [results subarrayWithRange:NSMakeRange(0, numberOfItemsToInclude)];
-    }
+    [rankedAndPrunedResults addEntriesFromDictionary:prunedBridgedGroupResults];
     
     return rankedAndPrunedResults;
 }
 
-+ (NSArray *) mergeSpotlightBridgeSectionsFromBundleIdToSectionMapping:(NSDictionary *)bundleIdToSectionMap withRankedSections:(NSArray *)rankedSections
-{    
-    NSArray *spbSections = [self filterSPBSectionsFromResultSections: [bundleIdToSectionMap allValues]];
-    if (![spbSections count]) {
-        return rankedSections;
++(NSArray *)bridgedGroupNamesForResultsByGroupName:(NSMutableDictionary*)resultsByGroupName {
+    NSMutableArray *spotlightBridgeGroupKeys = [NSMutableArray array];
+    
+    for (NSString * groupName in [resultsByGroupName allKeys]) {
+        if ([self isFirstObjectABridgedResult:resultsByGroupName[groupName]]) {
+            [spotlightBridgeGroupKeys addObject:groupName];
+        }
     }
     
-    NSArray *spbRankedSections = [self rankSpotlightBridgeSections:spbSections];
+    return spotlightBridgeGroupKeys;
+}
+
++(NSDictionary*)pruneGroupedResults: (NSMutableDictionary*)resultsByGroupName forGroupNames: (NSArray*)groupNames {
+    NSMutableDictionary *bridgedResults = [NSMutableDictionary dictionary];
     
-    return [spbRankedSections arrayByAddingObjectsFromArray:rankedSections];
+    for (NSString *groupName in groupNames) {
+        NSArray *results = resultsByGroupName[groupName];
+        
+        int maximumNumberOfResultsPerGroup = 5;
+        int numberOfItemsToInclude = MIN((int)[results count], maximumNumberOfResultsPerGroup);
+        bridgedResults[groupName] = [results subarrayWithRange:NSMakeRange(0, numberOfItemsToInclude)];
+    }
+    
+    return bridgedResults;
+}
+
++(BOOL)isFirstObjectABridgedResult: (NSArray*)results {
+    return results.count && [results[0] isKindOfClass:[SPBBridgingSearchResult class]];
 }
 
 +(void)insertSpotlightBridgeCategoriesFromGroupedResults: (NSDictionary*)groupedResults intoRankedCategories:(NSMutableArray*)categories {
@@ -119,40 +121,11 @@
     return [spotlightBridgeGroupedResults copy];
 }
 
-+ (NSArray *) filterSPBSectionsFromResultSections:(NSArray *)sections {
-    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(SFMutableResultSection *object, NSDictionary *bindings) {
-        return [object domain] == SPBResultSectionDomain;
-    }];
-    
-    return [sections filteredArrayUsingPredicate:predicate];
-}
-
-+(NSArray *)rankSpotlightBridgeSections: (NSArray *)sections {
-    NSMutableDictionary *scoreMap = [self scoreMapForSections:sections];
-    
-    return [sections sortedArrayUsingComparator:^NSComparisonResult(SFMutableResultSection *a, SFMutableResultSection *b) {
-        NSNumber *firstSectionScore = scoreMap[a.bundleIdentifier];
-        NSNumber *secondSectionScore = scoreMap[b.bundleIdentifier];
-        
-        return [secondSectionScore compare: firstSectionScore];
-    }];
-}
-
 +(NSMutableDictionary*)scoreMapForGroupedResults: (NSDictionary*)groupedResults {
     NSMutableDictionary *scoreMap = [NSMutableDictionary dictionary];
     for(NSString *category in [groupedResults allKeys]) {
         float score = [self getMaxScoreForResults:groupedResults[category]];
         scoreMap[category] = [NSNumber numberWithFloat:score];
-    }
-    
-    return scoreMap;
-}
-
-+(NSMutableDictionary*)scoreMapForSections: (NSArray *)sections {
-    NSMutableDictionary *scoreMap = [NSMutableDictionary dictionary];
-    for (SFMutableResultSection *section in sections) {
-        float score = [self getMaxScoreForResults:section.results];
-        scoreMap[section.bundleIdentifier] = [NSNumber numberWithFloat: score];
     }
     
     return scoreMap;

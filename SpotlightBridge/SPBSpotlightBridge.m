@@ -11,6 +11,7 @@
 #import "SPBManager.h"
 #import "SPBRankingManager.h"
 #import "PRSRankingManager.h"
+#import "SPBSectionRankingManager.h"
 #include <Availability.h>
 
 #pragma mark - Swizzles
@@ -34,7 +35,7 @@ hook(SSRankingManager)
 /* Inserts the Spotlight Bridge sections with the default spotlight sections in the desired ordering */
 - (id)rankSectionsUsingBundleIDToSectionMapping:(NSDictionary*)arg1 withRanker:(id)arg2 isPeopleSearch:(BOOL)arg3 isScopedAppSearch:(BOOL)arg4 queryId:(unsigned long long)arg5 isCJK:(BOOL)arg6 {
     NSArray *rankedSections = ZKOrig(id, arg1, arg2, arg3, arg4, arg5, arg6);
-    return [SPBRankingManager mergeSpotlightBridgeSectionsFromBundleIdToSectionMapping:arg1 withRankedSections:rankedSections];
+    return [SPBSectionRankingManager mergeSpotlightBridgeSectionsFromBundleIdToSectionMapping:arg1 withRankedSections:rankedSections];
 }
 
 endhook
@@ -48,7 +49,7 @@ hook(SPQueryTask)
 
 -(id)rankAndPrune:(NSMutableDictionary*)resultsByGroupName maxResults:(unsigned long long)arg3 parsecResultCategories:(id)arg4 topHitCategory:(id)arg5 totalResultCount:(long long *)arg6 query:(id)arg7 {
     NSMutableDictionary *result =  ZKOrig(id, resultsByGroupName, arg3, arg4, arg5,arg6,arg7);
-    return [SPBRankingManager mergeSpotlightBridgeResultsWithRankedAndPrunedResults:result resultsByGroupName:resultsByGroupName];
+    return [SPBRankingManager mergeBridgeResultsWithRankedAndPrunedResults:result resultsByGroupName:resultsByGroupName];
 }
 
 endhook

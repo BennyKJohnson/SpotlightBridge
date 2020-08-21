@@ -12,13 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SPBRankingManager : NSObject
 
-+ (NSArray *) mergeSpotlightBridgeSectionsFromBundleIdToSectionMapping:(NSDictionary *)bundleIdToSectionMap withRankedSections:(NSArray *)rankedSections;
-
-+ (NSMutableDictionary*)mergeSpotlightBridgeResultsWithRankedAndPrunedResults: (NSMutableDictionary*)rankedAndPrunedResults resultsByGroupName: (NSMutableDictionary*)resultsByGroupName;
++ (NSMutableDictionary*)mergeBridgeResultsWithRankedAndPrunedResults: (NSMutableDictionary*)rankedAndPrunedResults resultsByGroupName: (NSMutableDictionary*)resultsByGroupName;
 
 +(void)insertSpotlightBridgeCategoriesFromGroupedResults: (NSDictionary*)groupedResults intoRankedCategories:(NSMutableArray*)categories;
 
 +(NSArray*)chooseTopHits: (NSArray *)topHits sortedResults: (id)results;
+
++(float)getMaxScoreForResults:(NSArray*)results;
 
 @end
 

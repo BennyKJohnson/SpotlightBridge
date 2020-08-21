@@ -72,11 +72,30 @@
     XCTAssertTrue([topHits isEqualToArray:expectedTopHits]);
 }
 
+-(void)testMergeBridgedResultsWithRankedAndPrunedResults
+{
+    NSMutableDictionary *rankedAndPrunedResults = [NSMutableDictionary dictionary];
+    NSMutableDictionary *resultsByGroupName = [NSMutableDictionary dictionary];
+    SPBBridgingSearchResult *result = [self createBridgedSearchResult];
+    resultsByGroupName[@"BridgedResults"] = @[
+        result
+    ];
+    [SPBRankingManager mergeBridgeResultsWithRankedAndPrunedResults:rankedAndPrunedResults resultsByGroupName:resultsByGroupName];
+    
+    XCTAssertTrue([rankedAndPrunedResults[@"BridgedResults"] isEqualToArray:@[result]]);
+}
+
 -(SPBBridgingSearchResult*)createBridgingSearchResultWithScore: (float)score {
     SPBTestSearchResult *searchResult = [[SPBTestSearchResult alloc] initWithDisplayName:@""];
     searchResult.score = score;
     
     return [[SPBBridgingSearchResult alloc] initWithSearchResult:searchResult];
+}
+
+-(SPBBridgingSearchResult*)createBridgedSearchResult {
+    SPBTestSearchResult *searchResult = [[SPBTestSearchResult alloc] initWithDisplayName:@""];
+    return [[SPBBridgingSearchResult alloc] initWithSearchResult:searchResult];
+
 }
 
 -(SPBBridgingSearchResult *)createBridgingSearchResultWithTopHit: (BOOL)topHit {

@@ -29,12 +29,16 @@ const int SPBResultSectionGroupID = 8080;
     NSMutableArray *spotlightResults = [NSMutableArray array];
     
     for (SPBSearchResult *result in self.results) {
-        SPBBridgingSearchResult *spotlightResult = [[SPBBridgingSearchResult alloc]initWithSearchResult:result];
-        spotlightResult.sectionName = self.title;
-        [spotlightResults addObject:spotlightResult];
+        [spotlightResults addObject:[self prepareBridgingSearchResultForResult:result]];
     }
     
     return [spotlightResults copy];
+}
+
+-(SPBBridgingSearchResult*)prepareBridgingSearchResultForResult: (SPBSearchResult*)result {
+    SPBBridgingSearchResult *spotlightResult = [[SPBBridgingSearchResult alloc]initWithSearchResult:result];
+    spotlightResult.sectionName = self.title;
+    return spotlightResult;
 }
 
 @end

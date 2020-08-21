@@ -23,13 +23,17 @@
     [super start];
     
     [self performQuery:self.userQueryString withCompletionHandler:^(SPBResponse * response) {
-        if (response) {
-            SPKResponse *convertedResponse = [[SPKResponse alloc] initWithBridgedResponse:response];
-            self.responseHandler(convertedResponse);
-        } else {
-            self.responseHandler(NULL);
-        }
+        [self handleQueryResponse:response];
     }];
+}
+
+-(void) handleQueryResponse: (SPBResponse*)response {
+    if (response) {
+        SPKResponse *convertedResponse = [[SPKResponse alloc] initWithBridgedResponse:response];
+        self.responseHandler(convertedResponse);
+    } else {
+        self.responseHandler(NULL);
+    }
 }
 
 -(void) performQuery:(NSString *)userQueryString withCompletionHandler:(void (^)(SPBResponse *response))completionHandler {
